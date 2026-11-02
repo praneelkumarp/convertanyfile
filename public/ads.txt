@@ -1,9 +1,1 @@
-# ads.txt for ConvertAnyFile
-# This file tells AdSense which sellers are authorized to sell your ad inventory.
-# Replace pub-XXXXXXXXXXXXXXXX with your actual AdSense publisher ID (the part after "ca-").
-# Once deployed, this file MUST be accessible at https://convertanyfile.online/ads.txt
-#
-# Example (replace with your real ID):
-# google.com, pub-1234567890123456, DIRECT, f08c47fec0942fa0
-#
-# Leave this commented until you have your real ID. Uncomment and edit when ready.
+google.com, pub-6887753575113688, DIRECT, f08c47fec0942fa0
