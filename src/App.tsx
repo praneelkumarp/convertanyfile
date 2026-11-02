@@ -14,6 +14,7 @@ import { ConsentBanner } from "@/components/ads/ConsentBanner";
 import { AdSenseLoader } from "@/components/ads/AdSenseLoader";
 import MergePdf from "./pages/MergePdf";
 import SplitPdf from "./pages/SplitPdf";
+import CompressImage from "./pages/CompressImage";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/convert" element={<Convert />} />
           <Route path="/merge-pdf" element={<MergePdf />} />
           <Route path="/split-pdf" element={<SplitPdf />} />
+          <Route path="/compress-image" element={<CompressImage />} />
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/contact" element={<Contact />} />

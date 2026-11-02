@@ -55,6 +55,11 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/compress-image" className="text-foreground/80 hover:text-foreground transition-colors">
+                  Compress Image
+                </Link>
+              </li>
+              <li>
                 <Link to="/" className="text-foreground/80 hover:text-foreground transition-colors">
                   Home
                 </Link>

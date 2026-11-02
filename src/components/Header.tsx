@@ -8,6 +8,7 @@ const navLinks = [
   { to: "/convert", label: "Convert" },
   { to: "/merge-pdf", label: "Merge PDF" },
   { to: "/split-pdf", label: "Split PDF" },
+  { to: "/compress-image", label: "Compress Image" },
   { to: "/about", label: "About" },
   { to: "/privacy", label: "Privacy" },
 ];
@@ -40,7 +41,7 @@ export const Header = () => {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
@@ -60,7 +61,7 @@ export const Header = () => {
           {/* Mobile menu button - 44px touch target */}
           <button
             type="button"
-            className="md:hidden p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="lg:hidden p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
@@ -74,7 +75,7 @@ export const Header = () => {
 
         {/* Mobile menu drawer */}
         {mobileOpen && (
-          <nav className="md:hidden border-t border-border py-2 animate-in slide-in-from-top duration-200">
+          <nav className="lg:hidden border-t border-border py-2 animate-in slide-in-from-top duration-200">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
