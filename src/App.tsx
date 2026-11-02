@@ -12,6 +12,7 @@ import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import { ConsentBanner } from "@/components/ads/ConsentBanner";
 import { AdSenseLoader } from "@/components/ads/AdSenseLoader";
+import { RouteSeo } from "@/components/RouteSeo";
 import MergePdf from "./pages/MergePdf";
 import SplitPdf from "./pages/SplitPdf";
 import CompressImage from "./pages/CompressImage";
@@ -26,6 +27,7 @@ const App = () => (
       <BrowserRouter>
         {/* Loads AdSense script only after user consent */}
         <AdSenseLoader />
+        <RouteSeo />
 
         <Routes>
           <Route path="/" element={<Index />} />

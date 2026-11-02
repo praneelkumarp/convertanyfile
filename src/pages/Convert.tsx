@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ToolGuide } from "@/components/ToolGuide";
 import { FileUploadWidget } from "@/components/FileUploadWidget";
 import { ConversionOptions } from "@/components/ConversionOptions";
 import { DetectedFile } from "@/utils/fileDetection";
@@ -50,6 +51,8 @@ const Convert = () => {
               <ConversionOptions file={fileData.file} detected={fileData.detected} />
             </div>
           )}
+
+          <ToolGuide path="/convert" />
         </div>
       </main>
 

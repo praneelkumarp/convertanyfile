@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ToolGuide } from "@/components/ToolGuide";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -487,6 +488,8 @@ const CompressImage = () => {
               </div>
             </div>
           </Card>
+
+          <ToolGuide path="/compress-image" />
         </div>
       </main>
 

@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ToolGuide } from "@/components/ToolGuide";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Upload, FileText, X, Loader2, Shield, Scissors, Files } from "lucide-react";
@@ -297,6 +298,8 @@ const SplitPdf = () => {
               </div>
             </div>
           </Card>
+
+          <ToolGuide path="/split-pdf" />
         </div>
       </main>
 

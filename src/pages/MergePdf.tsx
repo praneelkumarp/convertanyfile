@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ToolGuide } from "@/components/ToolGuide";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Upload, FileText, ArrowUp, ArrowDown, X, Loader2, Shield, FilePlus2 } from "lucide-react";
@@ -312,6 +313,8 @@ const MergePdf = () => {
               </div>
             </div>
           </Card>
+
+          <ToolGuide path="/merge-pdf" />
         </div>
       </main>
 
