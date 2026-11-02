@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -302,7 +303,11 @@ const MergePdf = () => {
                 <p className="font-medium text-foreground">100% private — files stay on your device</p>
                 <p className="text-xs">
                   PDF merging happens entirely in your browser. Nothing is uploaded to any server.
-                  Use the arrows to reorder PDFs before merging.
+                  Use the arrows to reorder PDFs before merging. Need to pull pages out instead?{" "}
+                  <Link to="/split-pdf" className="underline hover:text-foreground">
+                    Split a PDF
+                  </Link>
+                  .
                 </p>
               </div>
             </div>

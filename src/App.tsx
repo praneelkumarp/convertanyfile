@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 import { ConsentBanner } from "@/components/ads/ConsentBanner";
 import { AdSenseLoader } from "@/components/ads/AdSenseLoader";
 import MergePdf from "./pages/MergePdf";
+import SplitPdf from "./pages/SplitPdf";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/convert" element={<Convert />} />
           <Route path="/merge-pdf" element={<MergePdf />} />
+          <Route path="/split-pdf" element={<SplitPdf />} />
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/contact" element={<Contact />} />

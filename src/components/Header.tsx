@@ -7,6 +7,7 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/convert", label: "Convert" },
   { to: "/merge-pdf", label: "Merge PDF" },
+  { to: "/split-pdf", label: "Split PDF" },
   { to: "/about", label: "About" },
   { to: "/privacy", label: "Privacy" },
 ];

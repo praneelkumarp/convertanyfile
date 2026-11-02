@@ -45,6 +45,16 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/merge-pdf" className="text-foreground/80 hover:text-foreground transition-colors">
+                  Merge PDF
+                </Link>
+              </li>
+              <li>
+                <Link to="/split-pdf" className="text-foreground/80 hover:text-foreground transition-colors">
+                  Split PDF
+                </Link>
+              </li>
+              <li>
                 <Link to="/" className="text-foreground/80 hover:text-foreground transition-colors">
                   Home
                 </Link>
