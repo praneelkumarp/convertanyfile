@@ -8,7 +8,7 @@ import { Card } from "./ui/card";
 import { toast } from "sonner";
 
 import { pdfToImages } from "@/engines/pdfToImages";
-import { pdfToText } from "@/engines/pdfToText";
+import { pdfToText, NoTextFoundError } from "@/engines/pdfToText";
 import { convertDocxToPdf } from "@/engines/docxToPdf";
 import { convertDocxToHtml } from "@/engines/docxToHtml";
 import { convertDocxToText } from "@/engines/docxToText";

@@ -1,14 +1,28 @@
-import { getDocument, GlobalWorkerOptions } from "pdfjs-dist";
-import workerSrc from "pdfjs-dist/build/pdf.worker.mjs?url";
+// PERFORMANCE: pdfjs-dist is dynamically imported inside the function so
+// the ~2 MB PDF.js library + worker do NOT load on initial page render.
+// They only download when the user actually triggers a PDF conversion.
 
-// Set local Vite-bundled worker — never CDN
-GlobalWorkerOptions.workerSrc = workerSrc;
+let workerConfigured = false;
+
+async function ensurePdfjs() {
+  const pdfjs = await import("pdfjs-dist");
+
+  if (!workerConfigured) {
+    // Set local Vite-bundled worker — never CDN
+    const workerSrc = (await import("pdfjs-dist/build/pdf.worker.mjs?url")).default;
+    pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
+    workerConfigured = true;
+  }
+
+  return pdfjs;
+}
 
 export async function pdfToImages(
   file: File,
   format: "png" | "jpg",
   onProgress?: (current: number, total: number) => void
 ) {
+  const { getDocument } = await ensurePdfjs();
   const buffer = await file.arrayBuffer();
   const pdf = await getDocument({ data: buffer }).promise;
 

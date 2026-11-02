@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/convert", label: "Convert" },
+  { to: "/merge-pdf", label: "Merge PDF" },
   { to: "/about", label: "About" },
   { to: "/privacy", label: "Privacy" },
 ];
